@@ -1,7 +1,6 @@
 # create
 # README.md — Library Management Database (SQL Project)
-# Project Title
-# Library Management System — Normalized SQL Database (up to 3NF)
+
 
 # What I Built
 I designed and implemented a relational database system for a Library Management System using MySQL.
@@ -73,7 +72,9 @@ CREATE TABLE Books (
 );
 
 - Running the Project in Google Colab
+
 To run MySQL inside Google Colab:
+
 !apt-get update -qq
 !apt-get install -y mysql-server > /dev/null
 !service mysql start
@@ -83,6 +84,8 @@ To run MySQL inside Google Colab:
 Then execute your SQL schema and queries.
 
  -  Example Query
+
+   
 SELECT m.Member_Name, b.Title, br.Borrow_Date, br.Return_Date
 FROM Borrow br
 JOIN Members m ON br.Member_ID = m.Member_ID
