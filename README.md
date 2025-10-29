@@ -72,8 +72,7 @@ CREATE TABLE Books (
   FOREIGN KEY (Author_ID) REFERENCES Authors(Author_ID)
 );
 
-
- 4. Running the Project in Google Colab
+- Running the Project in Google Colab
 To run MySQL inside Google Colab:
 !apt-get update -qq
 !apt-get install -y mysql-server > /dev/null
@@ -83,14 +82,14 @@ To run MySQL inside Google Colab:
 
 Then execute your SQL schema and queries.
 
- 5. Example Query
+ -  Example Query
 SELECT m.Member_Name, b.Title, br.Borrow_Date, br.Return_Date
 FROM Borrow br
 JOIN Members m ON br.Member_ID = m.Member_ID
 JOIN Books b ON br.Book_ID = b.Book_ID;
 
 
- 6. Learning Outcomes
+ -  Learning Outcomes
 Understood database normalization (1NF–3NF)
 Practiced foreign key relationships
 Created ER diagrams and SQL scripts
