@@ -76,9 +76,13 @@ CREATE TABLE Books (
 To run MySQL inside Google Colab:
 
 !apt-get update -qq
+
 !apt-get install -y mysql-server > /dev/null
+
 !service mysql start
+
 !mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root'; FLUSH PRIVILEGES;"
+
 !mysql -uroot -proot -e "CREATE DATABASE LibraryDB; SHOW DATABASES;"
 
 Then execute your SQL schema and queries.
@@ -87,8 +91,11 @@ Then execute your SQL schema and queries.
 
    
 SELECT m.Member_Name, b.Title, br.Borrow_Date, br.Return_Date
+
 FROM Borrow br
+
 JOIN Members m ON br.Member_ID = m.Member_ID
+
 JOIN Books b ON br.Book_ID = b.Book_ID;
 
 
